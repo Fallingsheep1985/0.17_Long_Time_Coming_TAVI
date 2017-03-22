@@ -91,6 +91,7 @@ if (!isDedicated) then {
 };
 
 initialized = false;
+call compile preprocessFileLineNumbers "ScriptControl.sqf";
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
@@ -102,6 +103,13 @@ progressLoadingScreen 0.25;
 call compile preprocessFileLineNumbers "server_traders.sqf";
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\tavi.sqf"; //Add trader city objects locally on every machine early
 if (dayz_POIs && (toLower worldName == "chernarus")) then {call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf";}; //Add POI objects locally on every machine early
+if(ADMINTOOLS_SCRIPT)then{
+	call compile preprocessFileLineNumbers "admintools\config.sqf"; // Epoch admin Tools config file
+	call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
+};
+//LOAD CUSTOM COMPILES
+call compile preprocessFileLineNumbers "Overrides\compiles.sqf";
+
 initialized = true;
 
 setTerrainGrid 25;
@@ -121,8 +129,12 @@ if (isServer) then {
 };
 
 if (!isDedicated) then {
+	if(ADMINTOOLS_SCRIPT)then{
+		[] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
+	} else {
 	//Enables Plant lib fixes
-	execVM "\z\addons\dayz_code\system\antihack.sqf";
+		execVM "\z\addons\dayz_code\system\antihack.sqf";
+	};
 	
 	if (toLower(worldName) == "chernarus") then {
 		diag_log "WARNING: Clearing annoying benches from Chernarus";
@@ -139,4 +151,13 @@ if (!isDedicated) then {
 	3 fadeSound 1;
 	3 fadeMusic 1;
 	endLoadingScreen;
+	
+	//CUSTOM STUFF
+	if (WELCOME_MESSAGES) then{
+		[] execVM "scripts\Server_WelcomeCredits.sqf";
+	};
+	if(ADMINTOOLS_SCRIPT)then{
+		[] execVM "admintools\Activate.sqf"; // Epoch admin tools
+	};
+	
 };
