@@ -153,9 +153,6 @@ if (!isDedicated) then {
 	endLoadingScreen;
 	
 	//CUSTOM STUFF
-	if (WELCOME_MESSAGES_SCRIPT) then{
-		[] execVM "scripts\Server_WelcomeCredits.sqf";
-	};
 	if(ADMINTOOLS_SCRIPT)then{
 		[] execVM "admintools\Activate.sqf"; // Epoch admin tools
 	};
