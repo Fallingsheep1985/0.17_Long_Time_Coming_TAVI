@@ -374,6 +374,19 @@ for "_i" from 0 to 10 do {
 diag_log format["Total Number of spawn locations %1", actualSpawnMarkerCount];
 
 if (isDedicated) then {endLoadingScreen;};
+
+//DZAI
+if(DZAI_SCRIPT)then{
+	[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
+};
+//WAI
+if(WAI_SCRIPT)then{
+	[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+};
+//DZMS
+if(DZMS_SCRIPT)then{
+	[] ExecVM "\z\addons\dayz_server\DZMS\DZMSInit.sqf";
+};
 allowConnection = true;
 sm_done = true;
 publicVariable "sm_done";
