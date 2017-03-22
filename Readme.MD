@@ -6,3 +6,4 @@ Currently includes only the following
 	- WELCOME CREDITS
 	- ADMIN TOOLS
 	- CUSTOM LOADING SCREEN
+	- REGEN BLOOD

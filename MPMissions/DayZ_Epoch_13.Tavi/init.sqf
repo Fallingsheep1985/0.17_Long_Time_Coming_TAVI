@@ -10,7 +10,7 @@ dayZ_serverName = ""; //Shown to all players in the bottom left of the screen (c
 //Game settings
 dayz_antihack = 1; // DayZ Antihack / 1 = enabled // 0 = disabled
 dayz_REsec = 1; // DayZ RE Security / 1 = enabled // 0 = disabled
-dayz_enableRules = true; //Enables a nice little news/rules feed on player login (make sure to keep the lists quick).
+dayz_enableRules = false; //Enables a nice little news/rules feed on player login (make sure to keep the lists quick).
 dayz_quickSwitch = false; //Turns on forced animation for weapon switch. (hotkeys 1,2,3) False = enable animations, True = disable animations
 dayz_POIs = false; //Adds Point of Interest map additions (negatively impacts FPS)
 dayz_infectiousWaterholes = false; //Randomly adds some bodies, graves and wrecks by ponds (negatively impacts FPS)
@@ -153,11 +153,17 @@ if (!isDedicated) then {
 	endLoadingScreen;
 	
 	//CUSTOM STUFF
-	if (WELCOME_MESSAGES) then{
+	if (WELCOME_MESSAGES_SCRIPT) then{
 		[] execVM "scripts\Server_WelcomeCredits.sqf";
 	};
 	if(ADMINTOOLS_SCRIPT)then{
 		[] execVM "admintools\Activate.sqf"; // Epoch admin tools
 	};
+	if(REGENBLOOD_SCRIPT)then{
+		//Regen Blood
+		[] execVM "scripts\regenblood.sqf";
+	};
 	
 };
+
+diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];
