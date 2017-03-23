@@ -30,6 +30,11 @@ aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
 
+class RscTitles
+{
+	#include "images\logo.hpp"
+};
+
 #include "\z\addons\dayz_code\gui\description.hpp"
 #include "\z\addons\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 #include "\z\addons\dayz_code\Configs\CfgServerTrader\CfgServerTrader.hpp"

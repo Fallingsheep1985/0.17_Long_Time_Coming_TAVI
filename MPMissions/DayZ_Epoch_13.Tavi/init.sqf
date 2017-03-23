@@ -128,6 +128,7 @@ if (isServer) then {
 	if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\system\mission\chernarus\MainLootableObjects.sqf"; };
 };
 
+
 if (!isDedicated) then {
 	if(ADMINTOOLS_SCRIPT)then{
 		[] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
@@ -164,6 +165,9 @@ if (!isDedicated) then {
 		[] execVM "scripts\regenblood.sqf";
 	};
 	
+};
+if(LOGO_SCRIPT)then{
+	[] execVM "scripts\logo.sqf";
 };
 
 diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];
