@@ -72,6 +72,13 @@ EpochUseEvents = false; //Enable event scheduler. Define custom scripts in dayz_
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 // EPOCH CONFIG VARIABLES END //
 
+//EVR Blow out
+ns_blowout = true;
+ns_blowout_dayz = true;
+ns_blow_delaymod = 0.74; //blowout delay
+ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement
+ns_blow_playerdamage = 4000; // damage players without ns_blow_itemapsi can get per blowout
+ns_blow_emp = false;
 
 diag_log 'dayz_preloadFinished reset';
 dayz_preloadFinished=nil;
@@ -192,6 +199,11 @@ if(BASEJUMP_SCRIPT)then{
 if(CAGN_SCRIPT) then {
 		//Community Safezones
 		execVM "scripts\CAGN\initiate.sqf";	
+};
+//EVR Blow out
+if(EVR_BLOWOUT_SCRIPT)then{
+	if (isServer) then { _bul = [ns_blow_emp] execVM "scripts\blowout\module\blowout_server.sqf"; };
+	if (!isDedicated) then { _bul = [] execVM "scripts\blowout\module\blowout_client.sqf"; };
 };
 
 diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];
