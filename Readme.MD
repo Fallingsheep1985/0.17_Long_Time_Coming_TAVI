@@ -9,6 +9,7 @@ Currently includes only the following
 	- DZAI
 	- WAI
 	- DZMS
+	- ESS V3
 	
 	
 FEATURES NOW INCLUDED IN EPOCH
@@ -27,12 +28,10 @@ FEATURES NOW INCLUDED IN EPOCH
 	
 	
 TO ADD
-Epoch Admintools 1.9.1 (NoxSicarius)
 Admin Fast Build
 Custom Loot (Shootex)
 Watermark (MadHatter05)
 Custom Death Screen(Jokaru)
-ESS V2 (Enhanced Spawn Select) (ebay)
 Debug Monitor
 Burn Tents (soul)
 Deploy Bike

@@ -14,7 +14,12 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\loot\compile.sqf";
 BIS_Effects_Burn = {};
 dayz_disconnectPlayers = [];
 server_playerLogin = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerLogin.sqf";
-server_playerSetup = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerSetup.sqf";
+//ESS
+if(ESS_SCRIPT)then{
+	server_playerSetup = compile preprocessFileLineNumbers "\z\addons\dayz_server\overrides\server_playerSetup.sqf";
+}else{
+	server_playerSetup = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerSetup.sqf";
+};
 server_onPlayerDisconnect = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_onPlayerDisconnect.sqf";
 server_updateObject = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_updateObject.sqf";
 server_playerDied = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerDied.sqf";
@@ -268,3 +273,4 @@ array_reduceSize = {
 
 // Precise base building 1.0.5
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\kk_functions.sqf";
+#include "spawn_config.sqf"

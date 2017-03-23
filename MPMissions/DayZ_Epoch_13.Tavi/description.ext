@@ -35,3 +35,4 @@ diagHit = 1;
 #include "\z\addons\dayz_code\Configs\CfgServerTrader\CfgServerTrader.hpp"
 
 #include "admintools\dialog.hpp"
+#include "spawn\dialogs.hpp"
