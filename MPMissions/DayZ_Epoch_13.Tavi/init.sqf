@@ -169,5 +169,20 @@ if (!isDedicated) then {
 if(LOGO_SCRIPT)then{
 	[] execVM "scripts\logo.sqf";
 };
+//snow
+if(SNOW_SCRIPT)then{
+snowchance = 5; //5% chance to snow on server start/restart
+	if (isServer) then {
+		if((random 100) < snowchance)then{
+			[] execVM "scripts\SnowStorm.sqf";//FPS HIT
+		};
+	};
+};
+if(DUST_SCRIPT)then{
+	execVM "scripts\WindDust.sqf"; //FPS HIT
+};
+if(FOG_SCRIPT)then{
+	execVM "scripts\ground_fog.sqf"; //FPS HIT
+};
 
 diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];

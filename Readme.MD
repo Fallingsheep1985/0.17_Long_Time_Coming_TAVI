@@ -10,6 +10,9 @@ Currently includes only the following
 	- WAI
 	- DZMS
 	- ESS V3
+	- LOGO/WATERMARK
+	- SNOW STORM
+	- GROUND FOG
 	
 	
 FEATURES NOW INCLUDED IN EPOCH
@@ -30,7 +33,6 @@ FEATURES NOW INCLUDED IN EPOCH
 TO ADD
 Admin Fast Build
 Custom Loot (Shootex)
-Watermark (MadHatter05)
 Custom Death Screen(Jokaru)
 Debug Monitor
 Burn Tents (soul)
@@ -74,10 +76,7 @@ Walk Amongst Dead (Sandbird)
 Bank Robbery 2.9 (Darihon & Spodermayt)
 Service points (Axe Cop)
 JAEM (OtterNas3)
-Snow (Audio Rejectz)
-Ground Fog (Andrew_S90)
 Advanced Alchemy Building (hogscraper)
 Custom Kill Messages (0verHeat)
 Fast Rope godmode (Asian Kid)
-Watermark image (BAROD)
 Single Currency 3.0 (Zupa) - https://github.com/oiad/ZSC
