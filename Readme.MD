@@ -13,9 +13,11 @@ Currently includes only the following
 	- LOGO/WATERMARK
 	- SNOW STORM
 	- GROUND FOG
+	- BASE JUMP
+	- CUSTOM LOOT POSTIONS
 	
 	
-FEATURES NOW INCLUDED IN EPOCH
+FEATURES/SCRIPTS NOW INCLUDED IN EPOCH
 	- Group Mangement
 	- Precise Base Building
 	- Build Vectors

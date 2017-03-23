@@ -39,5 +39,8 @@ class RscTitles
 #include "\z\addons\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 #include "\z\addons\dayz_code\Configs\CfgServerTrader\CfgServerTrader.hpp"
 
+//Custom Loot Postions
+#include "CustomLoot\CfgBuildingPos.hpp"
+
 #include "admintools\dialog.hpp"
 #include "spawn\dialogs.hpp"
