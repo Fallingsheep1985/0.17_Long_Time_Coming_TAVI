@@ -188,5 +188,10 @@ if(FOG_SCRIPT)then{
 if(BASEJUMP_SCRIPT)then{
 	call compile preprocessFileLineNumbers "scripts\baseJump\init.sqf";  
 };
+//
+if(CAGN_SCRIPT) then {
+		//Community Safezones
+		execVM "scripts\CAGN\initiate.sqf";	
+};
 
 diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];

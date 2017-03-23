@@ -33,6 +33,50 @@ diagHit = 1;
 class RscTitles
 {
 	#include "images\logo.hpp"
+	class DeathScr {
+		idd = -1;
+		movingEnable = 0;
+		duration = 10;
+		fadein = 2;
+		fadeout = 2;
+		name="DeathScr";
+		controls[]={"Picture"};
+		class Picture {
+			x = safezoneX; y = safezoneY; w = safezoneW; h = safezoneH;
+			text="DeathScr.paa";
+			sizeEx = -1;
+			type=0;
+			idc=-1;
+			style=48;
+			colorBackground[]={0,0,0,0};
+			colorText[]={1,1,1,1};
+			font="Bitstream";
+	};
+	};
+};
+class RscPicture
+{
+    access=0;
+    type=0;
+    idc=-1;
+    style=48;
+    colorBackground[]={0,0,0,0};
+    colorText[]={1,1,1,1};
+    font="TahomaB";
+    sizeEx=0;
+    lineSpacing=0;
+    text="";
+};
+class CfgSounds
+{
+sounds[] ={deathscreen};
+
+class deathscreen
+    {
+    name="deathscreen";
+    sound[]={deathscreen.ogg, db-6, 1};
+    titles[] = {};
+    };
 };
 
 #include "\z\addons\dayz_code\gui\description.hpp"
