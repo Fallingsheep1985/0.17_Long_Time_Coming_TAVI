@@ -16,6 +16,8 @@ Currently includes only the following
 	- BASE JUMP
 	- CUSTOM LOOT POSTIONS
 	- CUSTOM DEATHSCREEN
+	- CAGN SAFEZONES
+	- EVR BLOWOUT
 	
 	
 FEATURES/SCRIPTS NOW INCLUDED IN EPOCH
@@ -47,7 +49,6 @@ Carepackage on map (MattL)
 Sirens
 Nitro (Sandbird)
 Fast Rope (=BTC= & sabbath)
-CAGN (safezones)
 Harvest Hemp (infiSTAR, FragZ, Shogun338)
 Drink Water (Mamu1234)
 Arrest/Investigate (Inkko)
@@ -58,7 +59,6 @@ VASP 1.2 (OtterNas3)
 fast trade (gr8_boi52)
 Trade from vehicle + Backpack (Csus)
 Paint Vehicles (0verHeat)
-EVR Blow Out (Sumrak-Namaslk creator, JOoPs for how to)
 Elevator (Axecop)
 Craft In Shed (Barra81)
 Extra Loot Postions (General Zaroff)
