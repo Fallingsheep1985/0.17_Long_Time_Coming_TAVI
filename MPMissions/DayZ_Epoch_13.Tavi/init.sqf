@@ -184,5 +184,9 @@ if(DUST_SCRIPT)then{
 if(FOG_SCRIPT)then{
 	execVM "scripts\ground_fog.sqf"; //FPS HIT
 };
+//Base jump
+if(BASEJUMP_SCRIPT)then{
+	call compile preprocessFileLineNumbers "scripts\baseJump\init.sqf";  
+};
 
 diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];
