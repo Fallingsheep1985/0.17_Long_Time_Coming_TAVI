@@ -32,7 +32,7 @@ diagHit = 1;
 
 class RscTitles
 {
-	#include "images\logo.hpp"
+	#include "scripts\logo.hpp"
 	class DeathScr {
 		idd = -1;
 		movingEnable = 0;
@@ -43,7 +43,7 @@ class RscTitles
 		controls[]={"Picture"};
 		class Picture {
 			x = safezoneX; y = safezoneY; w = safezoneW; h = safezoneH;
-			text="DeathScr.paa";
+			text="pictures\DeathScr.paa";
 			sizeEx = -1;
 			type=0;
 			idc=-1;
@@ -51,7 +51,7 @@ class RscTitles
 			colorBackground[]={0,0,0,0};
 			colorText[]={1,1,1,1};
 			font="Bitstream";
-	};
+		};
 	};
 };
 class RscPicture
@@ -74,7 +74,7 @@ sounds[] ={deathscreen};
 class deathscreen
     {
     name="deathscreen";
-    sound[]={deathscreen.ogg, db-6, 1};
+    sound[]={sounds\deathscreen.ogg, db-6, 1};
     titles[] = {};
     };
 };

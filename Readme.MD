@@ -15,6 +15,7 @@ Currently includes only the following
 	- GROUND FOG
 	- BASE JUMP
 	- CUSTOM LOOT POSTIONS
+	- CUSTOM DEATHSCREEN
 	
 	
 FEATURES/SCRIPTS NOW INCLUDED IN EPOCH
@@ -35,7 +36,6 @@ FEATURES/SCRIPTS NOW INCLUDED IN EPOCH
 TO ADD
 Admin Fast Build
 Custom Loot (Shootex)
-Custom Death Screen(Jokaru)
 Debug Monitor
 Burn Tents (soul)
 Deploy Bike
